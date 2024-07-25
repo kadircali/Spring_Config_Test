@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+
+
+
+    <bean id="userManager" class="org.kadircali.UserManager">
+        <property name="dataBase" ref="postgre"></property>
+        <property name="user" ref="user1"></property>
+
+    </bean>
+
+
+  <bean id="user1" class="org.kadircali.User"></bean>
+
+
+    <bean id="mysql" class="org.kadircali.MySql"></bean>
+
+
+    <bean id="postgre" class="org.kadircali.PostgeSql"></bean>
+
+
+</beans>
